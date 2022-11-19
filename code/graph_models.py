@@ -1,15 +1,13 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.nn import LayerNorm
-import numpy as np
 
 import inspect
 
 from torch_geometric.utils import scatter_, softmax, add_self_loops
-from torch_geometric.nn.inits import glorot, zeros, uniform
+from torch_geometric.nn.inits import glorot, zeros
 
-from build_tree import build_stage_one_edges, build_stage_two_edges, build_cominbed_edges
+from build_tree import build_stage_one_edges, build_stage_two_edges
 from build_tree import build_icd9_tree, build_atc_tree
 
 

@@ -3,14 +3,11 @@ from __future__ import division
 from __future__ import print_function
 
 import os
-import copy
-import json
 import math
 import logging
 
 import torch
 from torch import nn
-from torch.nn import CrossEntropyLoss, BCEWithLogitsLoss
 # from torch.nn import LayerNorm
 import torch.nn.functional as F
 from config import BertConfig

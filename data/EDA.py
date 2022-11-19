@@ -1,5 +1,5 @@
 # %% Change working directory from the workspace root to the ipynb file location. Turn this addition off with the DataScience.changeDirOnImportExport setting
-import dill
+import pickle
 from random import shuffle
 import random
 import os
@@ -11,7 +11,6 @@ except:
 
 # %%
 import pandas as pd
-from collections import defaultdict
 import numpy as np
 
 med_file = 'PRESCRIPTIONS.csv'
@@ -437,7 +436,8 @@ def generate_ehr_graph():
 
 
 ehr_adj = generate_ehr_graph()
-dill.dump(ehr_adj, open('ehr_adj.pkl', 'wb'))
+with open('ehr_adj.pkl', 'wb') as fout:
+    pickle.dump(ehr_adj, fout)
 
 
 # %%

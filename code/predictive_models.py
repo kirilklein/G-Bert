@@ -3,20 +3,14 @@ from __future__ import division
 from __future__ import print_function
 
 import os
-import copy
-import json
-import math
 import logging
 import numpy as np
 
 import torch
 from torch import nn
-from torch.nn import CrossEntropyLoss, BCEWithLogitsLoss
-from torch.nn import LayerNorm
 import torch.nn.functional as F
 from config import BertConfig
-from bert_models import BERT, PreTrainedBertModel, BertLMPredictionHead, TransformerBlock, gelu
-import dill
+from bert_models import BERT, PreTrainedBertModel
 
 logger = logging.getLogger(__name__)
 
